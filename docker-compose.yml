@@ -23,7 +23,7 @@ services:
     restart: always
     volumes:
       - ./apisix_conf/config.yaml:/usr/local/apisix/conf/config.yaml:ro
-      # - ./plugins:/usr/local/apisix/plugins
+      - ./plugins:/usr/local/apisix/plugins
       - ./apisix_log:/usr/local/apisix/logs
     depends_on:
       - etcd
